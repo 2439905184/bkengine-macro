@@ -1,6 +1,5 @@
 ﻿*main
-#var a="A" + "B"
-//@text text=a
-//@bg file="1.jpg"
-@bg file="2.jpg" time=2 type=
+@bg file="1.jpg" time=2
+@click
+@bg file="2.jpg" time=2
 

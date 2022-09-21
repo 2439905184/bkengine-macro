@@ -3,11 +3,14 @@
 //bg 文件名 过渡时间(秒) 过渡类型
 @macro name="bg" file time type
 [return]
+
 *bg
 #var pfile="bg/" + file
 @sprite index=0 file=pfile
 @addto index=0 target=basic_layer
 @if "time!=null"
 	@action mode="fadeto" opacity=0 target=0 time=time*1000
+	@waitaction index=0
 @endif 
+@return
 //在下面写上宏的实现部分
