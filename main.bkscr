@@ -1,0 +1,6 @@
+﻿*main
+#var a="A" + "B"
+//@text text=a
+@bg file="1.jpg"
+@bg file="2.jpg"
+

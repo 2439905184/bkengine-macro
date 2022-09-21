@@ -1,0 +1,17 @@
+{
+    "import": {
+        "macro.bkscr": 0
+    },
+    "name": "suika2的宏",
+    "script": {
+        "main.bkscr": 0
+    },
+    "source": {
+        "bg": {
+            "1.jpg": 0,
+            "2.jpg": 0,
+            "3.jpg": 0
+        }
+    },
+    "version": "1.2"
+}
