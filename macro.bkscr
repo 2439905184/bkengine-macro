@@ -5,12 +5,23 @@
 [return]
 
 *bg
+#var bgs = []
 #var pfile="bg/" + file
 @sprite index=0 file=pfile
 @addto index=0 target=basic_layer
+/*
 @if "time!=null"
 	@action mode="fadeto" opacity=0 target=0 time=time*1000
 	@waitaction index=0
-@endif 
+@endif*/
+@if "type=='shutter' "//百叶窗
+	#log("shutter")
+	@pretrans
+	@trans mode="shutter" time=1000
+	@sprite index=1 file="bg/2.jpg"
+	@addto index=1 target=basic_layer
+	
+	//@waittrans 
+@endif
 @return
 //在下面写上宏的实现部分
