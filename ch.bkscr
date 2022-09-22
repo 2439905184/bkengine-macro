@@ -1,25 +1,28 @@
 ﻿*register
 //这之间写上要定义的宏或导入其他的宏文件
-@macro name="ch" pos file fadetime effect //更改角色
+@macro name="ch" pos file fadetime effect index //更改角色
 [return]
 *ch
 #var center_x = System.resolutionSize[0]/2
 #var center_y = System.resolutionSize[1]/2
 #log(center_x,center_y)
-@sprite file="ch/"+file index=0
+@sprite file="ch/"+file index=index
 @if "pos=='center' "
-	@addto index=0 target=basic_layer pos=[center_x,center_y]
-	@anchor index=0 set="center" 
+	@addto index=index target=basic_layer pos=[center_x,center_y]
+	@anchor index=index set="center" 
+@elseif "pos=='left' "
+	@addto index=index target=basic_layer pos=[0,center_y]
+	@anchor index=index set="leftcenter" 
 @elseif "pos=='right' "
 	#log(pos)
 	//800 300
 	#var x = System.resolutionSize[0]
-	@addto index=0 target=basic_layer pos=[x,center_y]
-	@anchor index=0 set="rightcenter"
+	@addto index=index target=basic_layer pos=[x,center_y]
+	@anchor index=index set="rightcenter"
 @elseif "pos=='back' " //back center
 	#var x = System.resolutionSize[0]
 	@addto index=-1 target=basic_layer pos=[x,center_y]
-	@anchor index=0 set="center" 
+	@anchor index=-1 set="center" 
 @endif
 @return
 //在下面写上宏的实现部分
