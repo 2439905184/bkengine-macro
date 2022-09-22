@@ -1,0 +1,15 @@
+﻿*register
+//这之间写上要定义的宏或导入其他的宏文件
+@macro name="ch" pos file fadetime effect //更改角色
+[return]
+*ch
+#var center_x = System.resolutionSize['x']/2
+#var center_y = System.resolutionSize['y']/2
+//#log(center_x)
+@sprite file="ch/"+file index=0
+@if "pos=='center' "
+	@addto index=0 target=basic_layer pos=[center_x,center_y]
+	@anchor index=0 set="center" 
+@endif
+@return
+//在下面写上宏的实现部分

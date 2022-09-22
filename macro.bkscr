@@ -5,6 +5,7 @@
 //内部使用
 @import file="add_bg.bkscr" 
 @import file="myreturn.bkscr" 
+@import file="ch.bkscr" 
 [return]
 
 *bg
