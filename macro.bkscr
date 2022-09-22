@@ -1,70 +1,11 @@
 ﻿*register
 //这之间写上要定义的宏或导入其他的宏文件
 //bg 文件名 过渡时间(秒) 过渡类型
-@macro name="bg" file time type rule
+@import file="bg.bkscr" 
 //内部使用
 @import file="add_bg.bkscr" 
 @import file="myreturn.bkscr" 
 @import file="ch.bkscr" 
 [return]
 
-*bg
-#var pfile="bg/" + file
-@sprite index=0 file=pfile
-@addto index=0 target=basic_layer
-@if "type=='crossfade'" //交叉淡化
-	#log(type)
-	@pretrans
-	@trans mode="crossfade" time=time*1000
-@endif 
-
-@if "tpye=='universal' " //mask遮罩
-	#log(type)
-	@pretrans 
-	@trans mode="universal" rule=rule time=time*1000
-@endif 
-@if "type=='scroll' " //卷轴
-	#log(type)
-	@pretrans 
-	@trans mode="scroll" time=time*1000
-@endif
-@if "type=='shutter' "//百叶窗
-	#log(type)
-	@pretrans
-	@trans mode="shutter" time=time*1000
-	@sprite index=1 file="bg/2.jpg"
-	@addto index=1 target=basic_layer
-@endif
-@if "type=='ripple' "//纹波
-	#log(type)
-	@pretrans
-	@trans mode="ripple" time=time*1000
-@endif
-@if "type=='rotateswap' "//旋转擦除
-	#log(type)
-	@pretrans
-	@trans mode="rotateswap" time=time*1000
-@endif
-@if "type=='rotatevanish' "//旋转退出
-	#log(type)
-	@pretrans
-	@trans mode="rotateswap" time=time*1000
-@endif
-@if "type=='rotatezoom' "//旋转缩放
-	#log(type)
-	@pretrans
-	@trans mode="rotatezoom" time=time*1000
-@endif
-@if "type=='wave' "//水波
-	#log(type)
-	@pretrans
-	@trans mode="wave" time=time*1000
-@endif
-@if "type=='turn' "//网格转场
-	#log(type)
-	@pretrans
-	@trans mode="turn" time=time*1000
-@endif
-
-@return
 //在下面写上宏的实现部分

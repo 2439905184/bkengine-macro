@@ -1,21 +1,5 @@
 ﻿*main
-@bg file="1.jpg" time=2 type="shutter"
-/*#a = "sh"
-@if "a == 'sh' "
-	#log("对的")
-@endif 
-*/
-/*
-@sprite index=0 file="bg/1.jpg"
-@addto index=0 target=basic_layer
-
-
-
-@pretrans
-@trans mode="shutter" time=2000
-@sprite index=1 file="bg/2.jpg"
-@addto index=1 target=basic_layer*/
-
+//@bg file="1.jpg" time=2 type="shutter"
+@bg file="1.jpg"
+@ch pos="left" file="c01.png" index=1
 @click
-//@bg file="2.jpg" time=2
-
