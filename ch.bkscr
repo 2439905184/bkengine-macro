@@ -3,12 +3,22 @@
 @macro name="ch" pos file fadetime effect //更改角色
 [return]
 *ch
-#var center_x = System.resolutionSize['x']/2
-#var center_y = System.resolutionSize['y']/2
-//#log(center_x)
+#var center_x = System.resolutionSize[0]/2
+#var center_y = System.resolutionSize[1]/2
+#log(center_x,center_y)
 @sprite file="ch/"+file index=0
 @if "pos=='center' "
 	@addto index=0 target=basic_layer pos=[center_x,center_y]
+	@anchor index=0 set="center" 
+@elseif "pos=='right' "
+	#log(pos)
+	//800 300
+	#var x = System.resolutionSize[0]
+	@addto index=0 target=basic_layer pos=[x,center_y]
+	@anchor index=0 set="rightcenter"
+@elseif "pos=='back' " //back center
+	#var x = System.resolutionSize[0]
+	@addto index=-1 target=basic_layer pos=[x,center_y]
 	@anchor index=0 set="center" 
 @endif
 @return
