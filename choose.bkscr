@@ -1,0 +1,14 @@
+﻿*register
+//这之间写上要定义的宏或导入其他的宏文件
+@macro name="choose2" label1 text1 label2 text2
+//@select file="image/2.png" text=["劈","不劈"] label=["*pi","*no_pi"] se="se/select.mp3"
+[return]
+*choose2
+@button idle="gui/sel.png" index=55
+#var center_x = System.resolutionSize[0]/2
+@addto index=55 target=basic_layer pos=[center_x,200]
+@anchor index=55 set="center"
+@return
+
+
+//在下面写上宏的实现部分

@@ -2,6 +2,7 @@
 //这之间写上要定义的宏或导入其他的宏文件
 //bg 文件名 过渡时间(秒) 过渡类型
 @import file="bg.bkscr" 
+@import file="choose.bkscr" 
 //内部使用
 @import file="add_bg.bkscr" 
 @import file="myreturn.bkscr" 

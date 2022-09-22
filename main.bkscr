@@ -2,5 +2,6 @@
 //@bg file="1.jpg" time=2 type="shutter"
 @bg file="1.jpg"
 @ch pos="left" file="c01.png" index=1
-@ch pos="right" file="c01.png" index=2
+@ch pos="right" file="k01.png" index=2
+@choose2 text1="A" label1="A" text2="B" label2="B"
 @click

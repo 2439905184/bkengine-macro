@@ -3,8 +3,10 @@
         "add_bg.bkscr": 0,
         "bg.bkscr": 0,
         "ch.bkscr": 0,
+        "choose.bkscr": 0,
         "macro.bkscr": 0,
-        "myreturn.bkscr": 0
+        "myreturn.bkscr": 0,
+        "vbox.bkscr": 0
     },
     "name": "suika2的宏",
     "script": {
@@ -20,6 +22,8 @@
         "ch": {
             "c01.png": 0,
             "k01.png": 0
+        },
+        "gui": {
         }
     },
     "version": "1.2"
