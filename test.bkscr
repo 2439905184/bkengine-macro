@@ -1,0 +1,6 @@
+﻿*main
+/*
+@sprite index=0 file=bgs[0]
+@addto index=0 target=basic_layer*/
+@my return=a
+#log(a)

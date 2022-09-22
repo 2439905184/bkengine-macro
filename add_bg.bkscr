@@ -1,0 +1,15 @@
+﻿*register
+//这之间写上要定义的宏或导入其他的宏文件
+@macro name="add_bg"
+
+[return]
+*add_bg
+##
+var f="bg/1.jpg";
+var bgs=[];
+bgs.add(f)
+//log(bgs);
+##
+@return bgs
+
+//在下面写上宏的实现部分
