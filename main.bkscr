@@ -1,8 +1,65 @@
 ﻿*main
-白天到黑夜
-@bg file="1.jpg" index=1 effect="mask" time=5 rule="mask/up.png"
+// 背景效果展示
+白天到黑夜 mask过渡
+@bg file="1.jpg" index=1 effect="mask" time=2 rule="mask/up.png"
 @click
 @bg file="2.jpg" index=2 
+@click
+@removeall delete=true index=basic_layer 
+
+卷轴过渡效果
+@bg file="1.jpg" index=1 effect="scroll" time=1
+@bg file="2.jpg" index=2 
+@click
+@removeall delete=true index=basic_layer
+
+百叶窗效果
+@bg file="1.jpg" index=1 effect="shutter" time=1
+@bg file="2.jpg" index=2
+@click
+@removeall delete=true index=basic_layer
+
+纹波效果
+@bg file="1.jpg" index=1 effect="ripple" time=1
+@bg file="2.jpg" index=2
+@click
+@removeall delete=true index=basic_layer
+
+旋转擦除效果
+@bg file="1.jpg" index=1 effect="rotateswap" time=1
+@bg file="2.jpg" index=2
+@click
+@removeall delete=true index=basic_layer
+
+旋转退出效果
+@bg file="1.jpg" index=1 effect="rotatevanish" time=1
+@bg file="2.jpg" index=2
+@click
+@removeall delete=true index=basic_layer
+
+旋转缩放效果
+@bg file="1.jpg" index=1 effect="rotatezoom" time=1
+@bg file="2.jpg" index=2
+@click
+@removeall delete=true index=basic_layer
+
+水波效果
+@bg file="1.jpg" index=1 effect="wave" time=1
+@bg file="2.jpg" index=2
+@click
+@removeall delete=true index=basic_layer
+
+网格转场效果
+@bg file="1.jpg" index=1 effect="turn" time=3
+@bg file="2.jpg" index=2
+@click
+@removeall delete=true index=basic_layer
+
+// 重新初始化背景
+@bg file="1.jpg" index=1
+@bg file="2.jpg" index=2
+
+// ch角色通用宏展示
 淡入
 @ch index=3 effect="fade" time=1 pos="center" file="c01.png" 
 @click
