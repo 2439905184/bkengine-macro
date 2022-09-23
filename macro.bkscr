@@ -4,6 +4,8 @@
 @import file="bg.bkscr" 
 @import file="ch.bkscr" 
 @import file="cha.bkscr" 
+@import file="bgm2.bkscr"
+@import file="extend.bkscr"
 //@import file="choose.bkscr" 
 //内部使用
 //@import file="add_bg.bkscr" 

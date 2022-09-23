@@ -1,0 +1,9 @@
+﻿*register
+//这之间写上要定义的宏或导入其他的宏文件
+@macro name="bgm2" file
+[return]
+*bgm2
+#var f = "bgm/"+ file
+@bgm file=f
+@return
+//在下面写上宏的实现部分

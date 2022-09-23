@@ -1,55 +1,82 @@
 ﻿*main
+@bgm2 file="琪露诺.mp3"
+@basic_dialogbox //以后移除这个官方宏 使用自己开发的宏用于匹配高度自定义的逻辑 and keep it simple 这个官方宏可能有点问题
+欢迎开发者学习此demo和自定义宏[r]
+@click
+以下的自定义宏的设计参考了suika2引擎[r]
+@click
+现在已经实现了@bg 背景切换命令 @bgm2 bgm播放命令 @ch 角色显示命令 @chs 角色自由移动命令[r]
+更多的宏请期待吧，或许不怎么更新了[r]
+@click
+继续刚才我要说的话[r]
+@click
+以后会尝试参考godot游戏引擎中的GUI的面向对象设计编写更加方便的宏[r]
+@click
+如果有可能的话，我想重启我的obkengine项目，创建动机来源于onscripter[r]
+@click
+因为bkengine和nscripter都是免费闭源软件，需要使用开源的方式进行跨平台运行。官方收费且找不到人。[r]
+@click
+这个引擎是开源的[r]
+@click
+链接:suika2.com [r]
+@click
+此demo代码开源地址[r]
+@click
+链接:github.com/2439905184/bkengine-macro [r]
+@click
+@bgm2 file="自制琶音片段.mp3"
+
 // 背景效果展示
-白天到黑夜 mask过渡
+白天到黑夜 mask过渡[r]
 @bg file="1.jpg" index=1 effect="mask" time=2 rule="mask/up.png"
 @click
 @bg file="2.jpg" index=2 
 @click
 @removeall delete=true index=basic_layer 
 
-卷轴过渡效果
+卷轴过渡效果[r]
 @bg file="1.jpg" index=1 effect="scroll" time=1
 @bg file="2.jpg" index=2 
 @click
 @removeall delete=true index=basic_layer
 
-百叶窗效果
+百叶窗效果[r]
 @bg file="1.jpg" index=1 effect="shutter" time=1
 @bg file="2.jpg" index=2
 @click
 @removeall delete=true index=basic_layer
 
-纹波效果
+纹波效果[r]
 @bg file="1.jpg" index=1 effect="ripple" time=1
 @bg file="2.jpg" index=2
 @click
 @removeall delete=true index=basic_layer
 
-旋转擦除效果
+旋转擦除效果[r]
 @bg file="1.jpg" index=1 effect="rotateswap" time=1
 @bg file="2.jpg" index=2
 @click
 @removeall delete=true index=basic_layer
 
-旋转退出效果
+旋转退出效果[r]
 @bg file="1.jpg" index=1 effect="rotatevanish" time=1
 @bg file="2.jpg" index=2
 @click
 @removeall delete=true index=basic_layer
 
-旋转缩放效果
+旋转缩放效果[r]
 @bg file="1.jpg" index=1 effect="rotatezoom" time=1
 @bg file="2.jpg" index=2
 @click
 @removeall delete=true index=basic_layer
 
-水波效果
+水波效果[r]
 @bg file="1.jpg" index=1 effect="wave" time=1
 @bg file="2.jpg" index=2
 @click
 @removeall delete=true index=basic_layer
 
-网格转场效果
+网格转场效果[r]
 @bg file="1.jpg" index=1 effect="turn" time=3
 @bg file="2.jpg" index=2
 @click
@@ -60,28 +87,52 @@
 @bg file="2.jpg" index=2
 
 // ch角色通用宏展示
-淡入
+淡入[r]
 @ch index=3 effect="fade" time=1 pos="center" file="c01.png" 
 @click
-淡出
+淡出[r]
 @ch index=3 effect="fadeout" time=1 pos="center" file="c01.png" 
 @click
 // 右侧滑入居中 左侧滑入居中
-左滑入
+左滑入[r]
 @ch index=4 effect="slide-left" time=1 file="k01.png"
 @click 
 @ch index=4 effect="fadeout" time=1 file="k01.png"
-右滑入
+右滑入[r]
 @ch index=5 effect="slide-right" time=1 file="k01.png"
 @click
 @ch index=5 effect="fadeout" time=1 file="k01.png"
-从上面往下滑入中央
+从上面往下滑入中央[r]
 @ch index=6 effect="slide-down" time=1 file="c01.png"
 @click
 @ch index=6 effect="fadeout" time=1 file="c01.png"
-从下面往上滑入中央
+从下面往上滑入中央[r]
 @ch index=7 effect="slide-up" time=1 file="c01.png"
 @click
 @ch index=7 effect="fadeout" time=1 file="c01.png"
 //@choose2 text1="A" label1="A" text2="B" label2="B"
+@click
+@removeall delete=true index=basic_layer
+
+// 重新初始化背景
+@bg file="1.jpg" index=1
+@bg file="2.jpg" index=2
+
+// 移动精灵图的位置
+@ch index=3 file="k01.png" pos="center"
+向右[r]
+@click
+@cha index=3 action="movex" time=1 to=300
+@click
+向左[r]
+@cha index=3 action="movex" time=1 to=-300
+@click
+向下[r]
+@cha index=3 action="movey" time=1 to=300
+@click
+向上[r]
+@cha index=3 action="movey" time=1 to=-300
+@click
+移动到坐标（相对）[r]
+@cha index=3 action="move" time=1 to=[100,100]
 @click

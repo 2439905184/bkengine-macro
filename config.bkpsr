@@ -4,7 +4,8 @@
 GameName = "suika2的宏";
 ResolutionSize = [800, 600];
 SaveDir = "SaveData";
+ScriptAutoSearchPath = ["macro"];
 MaxSaveDataNum = 10000;
 DefaultFontSize = 24;
-DefaultFontColor = "0xFFFFFF";
+DefaultFontColor = "0x000000";
 DebugLevel = 3;

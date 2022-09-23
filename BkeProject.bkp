@@ -2,10 +2,14 @@
     "import": {
         "add_bg.bkscr": 0,
         "bg.bkscr": 0,
+        "bgm2.bkscr": 0,
         "ch.bkscr": 0,
         "cha.bkscr": 0,
         "choose.bkscr": 0,
+        "extend.bkscr": 0,
         "macro.bkscr": 0,
+        "macros": {
+        },
         "myreturn.bkscr": 0
     },
     "name": "suika2的宏",
@@ -18,6 +22,10 @@
             "1.jpg": 0,
             "2.jpg": 0,
             "3.jpg": 0
+        },
+        "bgm": {
+            "琪露诺.mp3": 0,
+            "自制琶音片段.mp3": 0
         },
         "ch": {
             "c01.png": 0,
