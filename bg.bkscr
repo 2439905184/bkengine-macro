@@ -1,35 +1,45 @@
 ﻿*register
 //这之间写上要定义的宏或导入其他的宏文件
-@macro name="bg" file time type rule
+@macro name="bg" file time effect rule index
 [return]
-
 *bg
 #var pfile="bg/" + file
-@sprite index=0 file=pfile
-@addto index=0 target=basic_layer
-@if "type=='crossfade'" //交叉淡化
+#var custom_index = index
+@if "index==null"
+	@sprite index=0 file=pfile
+	@addto index=0 target=basic_layer
+@else
+	@sprite index=index file=pfile
+	@addto index=index target=basic_layer
+@endif
+@if "effect=='crossfade'" //交叉淡化
 	#log(type)
 	@pretrans
 	@trans mode="crossfade" time=time*1000
-@elseif "tpye=='universal' " //mask遮罩
-	#log(type)
-	@pretrans 
-	@trans mode="universal" rule=rule time=time*1000
-@elseif "type=='scroll' " //卷轴
+@elseif "effect=='mask' " //mask遮罩
+	@if "index==0"
+		@pretrans
+		@trans mode="universal" rule=rule time=time*1000
+	@else
+		#log("使用自定义trans index->",index)
+		@pretrans
+		@trans mode="universal" rule=rule time=time*1000
+	@endif
+@elseif "effect=='scroll' " //卷轴
 	#log(type)
 	@pretrans 
 	@trans mode="scroll" time=time*1000
-@elseif "type=='shutter' "//百叶窗
+@elseif "effect=='shutter' "//百叶窗
 	#log(type)
 	@pretrans
 	@trans mode="shutter" time=time*1000
 	@sprite index=1 file="bg/2.jpg"
 	@addto index=1 target=basic_layer
-@elseif "type=='ripple' "//纹波
+@elseif "effect=='ripple' "//纹波
 	#log(type)
 	@pretrans
 	@trans mode="ripple" time=time*1000
-@elseif "type=='rotateswap' "//旋转擦除
+@elseif "effect=='rotateswap' "//旋转擦除
 	#log(type)
 	@pretrans
 	@trans mode="rotateswap" time=time*1000
@@ -37,15 +47,15 @@
 	#log(type)
 	@pretrans
 	@trans mode="rotateswap" time=time*1000
-@elseif "type=='rotatezoom' "//旋转缩放
+@elseif "effect=='rotatezoom' "//旋转缩放
 	#log(type)
 	@pretrans
 	@trans mode="rotatezoom" time=time*1000
-@elseif "type=='wave' "//水波
+@elseif "effect=='wave' "//水波
 	#log(type)
 	@pretrans
 	@trans mode="wave" time=time*1000
-@elseif "type=='turn' "//网格转场
+@elseif "effect=='turn' "//网格转场
 	#log(type)
 	@pretrans
 	@trans mode="turn" time=time*1000
