@@ -1,2 +1,4 @@
 SaveData/
 *.bkbin
+*.exe
+dist/

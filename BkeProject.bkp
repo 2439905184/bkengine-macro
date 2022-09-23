@@ -6,6 +6,7 @@
         "ch.bkscr": 0,
         "cha.bkscr": 0,
         "choose.bkscr": 0,
+        "dialog.bkscr": 0,
         "extend.bkscr": 0,
         "macro.bkscr": 0,
         "macros": {
@@ -32,8 +33,12 @@
             "k01.png": 0
         },
         "gui": {
+            "main_flat_set.png": 0,
+            "main_flat_set2.png": 0,
+            "sel.png": 0
         },
         "mask": {
+            "up.png": 0
         }
     },
     "version": "1.2"
