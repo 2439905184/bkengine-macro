@@ -1,0 +1,15 @@
+﻿*register
+//这之间写上要定义的宏或导入其他的宏文件
+@macro name="cha" index action to time visible 
+[return]
+*cha
+// 相对移动
+@if "action=='movex' "
+	@action mode="moveby" target=index time=time*1000 pos=[to,0]
+@elseif "action=='movey' "
+	@action mode="moveby" target=index time=time*1000 pos=[0,to]
+@elseif "action=='move' "
+	@action mode="moveby" target=index time=time*1000 pos=to
+@endif
+@return
+//在下面写上宏的实现部分
