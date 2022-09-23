@@ -1,6 +1,6 @@
 ﻿*register
 //这之间写上要定义的宏或导入其他的宏文件
-@macro name="ch" pos file fadetime effect index //更改角色
+@macro name="ch" pos file time effect index //更改角色
 [return]
 *ch
 #var center_x = System.resolutionSize[0]/2
@@ -23,6 +23,13 @@
 	#var x = System.resolutionSize[0]
 	@addto index=-1 target=basic_layer pos=[x,center_y]
 	@anchor index=-1 set="center" 
+@endif
+@if "effect=='fade'"
+	@addto index=index opacity=0 target=basic_layer
+	@action mode="fadeto" time=time*1000 opacity=255 target=index
+@elseif "effect=='fadeout"
+	@addto index=index opacity=255 target=basic_layer
+	@action mode="fadeto" time=time*1000 opacity=0 target=index
 @endif
 @return
 //在下面写上宏的实现部分
