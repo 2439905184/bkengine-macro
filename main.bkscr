@@ -17,5 +17,13 @@
 @ch index=4 effect="slide-right" time=1 file="k01.png"
 @click
 @ch index=4 effect="fadeout" time=1 file="k01.png"
+从上面往下滑入中央
+@ch index=5 effect="slide-down" time=1 file="c01.png"
+@click
+@ch index=5 effect="fadeout" time=1 file="c01.png"
+从下面往上滑入中央
+@ch index=6 effect="slide-up" time=1 file="c01.png"
+@click
+@ch index=6 effect="fadeout" time=1 file="c01.png"
 //@choose2 text1="A" label1="A" text2="B" label2="B"
 @click
