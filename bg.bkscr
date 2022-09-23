@@ -43,7 +43,7 @@
 	#log(type)
 	@pretrans
 	@trans mode="rotateswap" time=time*1000
-@elseif "type=='rotatevanish' "//旋转退出
+@elseif "effect=='rotatevanish' "//旋转退出
 	#log(type)
 	@pretrans
 	@trans mode="rotateswap" time=time*1000
