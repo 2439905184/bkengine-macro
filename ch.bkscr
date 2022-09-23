@@ -6,6 +6,8 @@
 #var center_x = System.resolutionSize[0]/2
 #var center_y = System.resolutionSize[1]/2
 #log(center_x,center_y)
+#var window_x = System.resolutionSize[0]
+#var window_y = System.resolutionSize[1]
 @sprite file="ch/"+file index=index
 @if "pos=='center' "
 	@addto index=index target=basic_layer pos=[center_x,center_y]
@@ -30,6 +32,30 @@
 @elseif "effect=='fadeout"
 	@addto index=index opacity=255 target=basic_layer
 	@action mode="fadeto" time=time*1000 opacity=0 target=index
+@elseif "effect=='slide-down'" // 从顶部滑入居中
+	@addto index=index target=basic_layer pos=[center_x,0]
+	@anchor index=index set="bottomcenter" 
+	@action mode="moveto" pos=[center_x,window_y] target=index time=time*1000
+@elseif "effect=='slide-up' " // 从底部滑入居中
+	@addto index=index target=basic_layer pos=[center_x,window_y]
+	@anchor index=index set="topcenter"  
+	@action mode="moveto" pos=[center_x,0] target=index time=time*1000
+@elseif "effect=='slide-right" // 从左往右划入居中
+	@info file="ch/"+file get=ch_file
+	#var sprite_size_x = ch_file['width']
+	#log(sprite_size_x)
+	#var startx = 0 -(sprite_size_x /2)
+	@addto index=index target=basic_layer pos=[startx,center_y]
+	@anchor index=index set="center"   
+	@action mode="moveto" pos=[center_x,center_y] target=index time=time*1000
+@elseif "effect=='slide-left' " // 从右往左滑入居中
+	@info file="ch/"+file get=ch_file
+	#var sprite_size_x = ch_file['width']
+	#var tox = center_x - (sprite_size_x/2)
+	@addto index=index target=basic_layer pos=[window_x,center_y]
+	@anchor index=index set="leftcenter"  
+	@action mode="moveto" pos=[tox,center_y] target=index time=time*1000
 @endif
+
 @return
 //在下面写上宏的实现部分
