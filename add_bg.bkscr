@@ -1,4 +1,5 @@
-﻿*register
+﻿/*
+*register
 //这之间写上要定义的宏或导入其他的宏文件
 @macro name="add_bg"
 
@@ -11,5 +12,5 @@ bgs.add(f)
 //log(bgs);
 ##
 @return bgs
-
+*/
 //在下面写上宏的实现部分

@@ -5,8 +5,7 @@
         "ch.bkscr": 0,
         "choose.bkscr": 0,
         "macro.bkscr": 0,
-        "myreturn.bkscr": 0,
-        "vbox.bkscr": 0
+        "myreturn.bkscr": 0
     },
     "name": "suika2的宏",
     "script": {
@@ -24,6 +23,8 @@
             "k01.png": 0
         },
         "gui": {
+        },
+        "mask": {
         }
     },
     "version": "1.2"

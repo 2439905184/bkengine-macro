@@ -55,6 +55,7 @@
 	@addto index=index target=basic_layer pos=[window_x,center_y]
 	@anchor index=index set="leftcenter"  
 	@action mode="moveto" pos=[tox,center_y] target=index time=time*1000
+// todo：添加擦入 擦出效果 类似suika2引擎的 curtain-down curtain-up
 @endif
 
 @return
