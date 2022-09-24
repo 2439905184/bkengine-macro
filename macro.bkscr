@@ -6,10 +6,11 @@
 @import file="cha.bkscr" 
 @import file="bgm2.bkscr"
 @import file="extend.bkscr"
+@import file="dialog.bkscr" 
 //@import file="choose.bkscr" 
 //内部使用
 //@import file="add_bg.bkscr" 
-//@import file="myreturn.bkscr" 
+@import file="myreturn.bkscr" 
 [return]
 
 //在下面写上宏的实现部分

@@ -1,8 +1,26 @@
 ﻿*register
 //这之间写上要定义的宏或导入其他的宏文件
 @macro name="dialog"
+//todo 实现自动换行
+/*换行 [r]
+清屏 [er]
+等待点击 [l]
+等待换页 [p]*/
 [return]
 // todo
 *dialog
+@idlesp get=unused_index
+#log(unused_index)
+#var width = System.resolutionSize[0]
+#var height = System.resolutionSize[1]/2
+// 颜色 横向间隔 行间距 
+@textwindow color=#0450C5 xinterval=1 yinterval=1 rect=[0,0,width,height] pos=[0,400]
+@textstyle size=21 bold=false 
+/*
+[sprite index=500 file="gui/main_flat_set"]
+[addto index=500 target=message_layer zorder=-13 pos=[-30,-10] opacity=180]
+[sprite index=501 file="gui/main_flat_set2"]
+[addto index=501 target=message_layer zorder=-12 pos=[0,0] opacity=180]*/
 @return
+
 //在下面写上宏的实现部分
