@@ -1,10 +1,9 @@
-﻿/*
-*register
+﻿*register
 //这之间写上要定义的宏或导入其他的宏文件
 @macro name="my"
 [return]
 
 *my
-@return 4
-*/
+#var value = [1,2,3,4]
+@return value
 //在下面写上宏的实现部分

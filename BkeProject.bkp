@@ -15,8 +15,8 @@
     },
     "name": "suika2的宏",
     "script": {
-        "main.bkscr": 0,
-        "test.bkscr": 0
+        "dialog_example.bkscr": 0,
+        "main.bkscr": 0
     },
     "source": {
         "bg": {
