@@ -1,6 +1,35 @@
 ﻿*main
-/*
-@sprite index=0 file=bgs[0]
-@addto index=0 target=basic_layer*/
-//@my return=a
-#log(a)
+// init
+#global.line_index = 0
+@dialog enable=true change_page_at=7
+以下代码是用于展示自动换行的实现[p]
+
+@say_line text="第1行" wait_click=true
+@say_line text="第2行" wait_click=true
+@say_line text="第3行" wait_click=true
+@say_line text="第4行" wait_click=true
+@say_line text="第5行" wait_click=true
+@say_line text="第6行" wait_click=true
+@say_line text="第7行" wait_click=true
+
+@say_line text="第1行" wait_click=true
+@say_line text="第2行" wait_click=true
+@say_line text="第3行" wait_click=true
+@say_line text="第4行" wait_click=true
+@say_line text="第5行" wait_click=true
+@say_line text="第6行" wait_click=true
+@say_line text="第7行" wait_click=true
+
+@say_line text="第1行" wait_click=true
+@say_line text="第2行" wait_click=true
+@say_line text="第3行" wait_click=true
+@say_line text="第4行" wait_click=true
+@say_line text="第5行" wait_click=true
+@say_line text="第6行" wait_click=true
+@say_line text="第7行" wait_click=true
+
+展示结束[l]
+
+/*@say_line text="第2行" wait_click=true
+@say_line text="第3行" wait_click=true
+@say_line text="第4行" wait_click=true
