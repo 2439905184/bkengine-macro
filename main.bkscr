@@ -1,77 +1,80 @@
 ﻿*main
-//@jump file="test.bkscr" label="*main"
+//@jump file="dialog_example.bkscr" label="*main"
 @bgm2 file="琪露诺.mp3"
-@dialog
-欢迎开发者学习此demo和自定义宏[l][r]
-以下的自定义宏的设计参考了suika2引擎[l][r]
-现在已经实现了[l][r]
-bg 背景切换命令[l][r]
-bgm2 bgm播放命令[l][r]
-ch 角色显示命令[l][r]
-chs 角色自由移动命令[p]
-更多的宏请期待吧，或许不怎么更新了[l][r]
-继续刚才我要说的话[l][r]
-以后会尝试参考godot游戏引擎中的GUI的面向对象设计编写更加方便的宏[p]
-如果有可能的话，我想重启我的obkengine项目[l][r]
-创建动机来源于onscripter[l][r]
-因为bkengine和nscripter都是免费闭源软件，需要使用开源的方式进行跨平台运行。官方收费且找不到人。[l][r]
-这个引擎是开源的[l][r]
-链接:suika2.com [l][r]
-此demo代码开源地址[p]
-链接:github.com/2439905184/bkengine-macro [p]
+#global.line_index = 0
+@dialog enable=true change_page_at=7
+@say_line text="欢迎开发者学习此demo和自定义宏" wait_click=true
+@say_line text="以下的自定义宏的设计参考了suika2引擎" wait_click=true
+@say_line text="现在已经实现了" wait_click=true
+@say_line text="背景切换命令封装" wait_click=true
+@say_line text="bgm播放命令封装" wait_click=true
+@say_line text="角色显示命令封装" wait_click=true
+@say_line text="角色自由移动命令封装" wait_click=true
+@say_line text="更多的宏请期待吧，或许不怎么更新了" wait_click=true
+@say_line text="继续刚才我要说的话" wait_click=true
+@say_line text="以后会尝试参考godot游戏引擎中的GUI的面向对象设计编写更加方便的宏" wait_click=true
+@say_line text="如果有可能的话，我想重启我的obkengine项目" wait_click=true
+@say_line text="创建动机来源于onscripter" wait_click=true
+@say_line text="因为bkengine和nscripter都是免费闭源软件" wait_click=true
+@say_line text="需要使用开源的方式进行跨平台运行。" wait_click=true
+@say_line text="官方收费且找不到人" wait_click=true
+@say_line text="这个引擎是开源的" wait_click=true
+@say_line text="链接:suika2.com" wait_click=true
+@say_line text="此demo代码开源地址" wait_click=true
+@say_line text="链接:github.com/2439905184/bkengine-macro" wait_click=true
 @bgm2 file="自制琶音片段.mp3"
 
 // 背景效果展示
-白天到黑夜 mask过渡[l][r]
+@say_line text="白天到黑夜 mask过渡" wait_click=true
 @bg file="1.jpg" index=1 effect="mask" time=2 rule="mask/up.png"
 @click
 @bg file="2.jpg" index=2 
 @click
 @removeall delete=true index=basic_layer 
 
-卷轴过渡效果[l][r]
+@say_line text="卷轴过渡效果" wait_click=true
 @bg file="1.jpg" index=1 effect="scroll" time=1
 @bg file="2.jpg" index=2 
 @click
 @removeall delete=true index=basic_layer
 
-百叶窗效果[l][r]
+@say_line text="百叶窗效果" wait_click=true
 @bg file="1.jpg" index=1 effect="shutter" time=1
 @bg file="2.jpg" index=2
 @click
 @removeall delete=true index=basic_layer
 
-纹波效果[l][r]
+@say_line text="纹波效果" wait_click=true
 @bg file="1.jpg" index=1 effect="ripple" time=1
 @bg file="2.jpg" index=2
 @click
 @removeall delete=true index=basic_layer
 
-旋转擦除效果[l][r]
+@say_line text="旋转擦除效果" wait_click=true
 @bg file="1.jpg" index=1 effect="rotateswap" time=1
 @bg file="2.jpg" index=2
 @click
 @removeall delete=true index=basic_layer
 
-旋转退出效果[p]
+@say_line text="旋转退出效果" wait_click=true
 @bg file="1.jpg" index=1 effect="rotatevanish" time=1
 @bg file="2.jpg" index=2
 @click
 @removeall delete=true index=basic_layer
 
-旋转缩放效果[l][r]
+@say_line text="旋转缩放效果" wait_click=true
 @bg file="1.jpg" index=1 effect="rotatezoom" time=1
 @bg file="2.jpg" index=2
 @click
 @removeall delete=true index=basic_layer
 
-水波效果[l][r]
+@say_line text="水波效果" wait_click=true
 @bg file="1.jpg" index=1 effect="wave" time=1
 @bg file="2.jpg" index=2
 @click
 @removeall delete=true index=basic_layer
 
-网格转场效果[l][r]
+@say_line text="网格转场效果" wait_click=true
 @bg file="1.jpg" index=1 effect="turn" time=3
 @bg file="2.jpg" index=2
 @click
@@ -82,26 +85,26 @@ chs 角色自由移动命令[p]
 @bg file="2.jpg" index=2
 
 // ch角色通用宏展示
-淡入[l][r]
+@say_line text="淡入" wait_click=true
 @ch index=3 effect="fade" time=1 pos="center" file="c01.png" 
 @click
-淡出[l][r]
+@say_line text="淡出" wait_click=trues
 @ch index=3 effect="fadeout" time=1 pos="center" file="c01.png" 
 @click
 // 右侧滑入居中 左侧滑入居中
-左滑入[l][r]
+@say_line text="左滑入" wait_click=true
 @ch index=4 effect="slide-left" time=1 file="k01.png"
 @click 
 @ch index=4 effect="fadeout" time=1 file="k01.png"
-右滑入[p]
+@say_line text="右滑入" wait_click=true
 @ch index=5 effect="slide-right" time=1 file="k01.png"
 @click
 @ch index=5 effect="fadeout" time=1 file="k01.png"
-从上面往下滑入中央[l][r]
+@say_line text="从上面往下滑入中央" wait_click=true
 @ch index=6 effect="slide-down" time=1 file="c01.png"
 @click
 @ch index=6 effect="fadeout" time=1 file="c01.png"
-从下面往上滑入中央[l][r]
+@say_line text="从下面往上滑入中央" wait_click=true
 @ch index=7 effect="slide-up" time=1 file="c01.png"
 @click
 @ch index=7 effect="fadeout" time=1 file="c01.png"
@@ -115,19 +118,19 @@ chs 角色自由移动命令[p]
 
 // 移动精灵图的位置
 @ch index=3 file="k01.png" pos="center"
-向右[l][r]
-@click
+@say_line text="向右" wait_click=true
 @cha index=3 action="movex" time=1 to=300
 @click
-向左[l][r]
+@say_line text="向左" wait_click=true
 @cha index=3 action="movex" time=1 to=-300
 @click
-向下[l][r]
+@say_line text="向下" wait_click=true
 @cha index=3 action="movey" time=1 to=300
 @click
-向上[l][r]
+@say_line text="向上" wait_click=true
 @cha index=3 action="movey" time=1 to=-300
 @click
-移动到坐标（相对）[l][r]
+@say_line text="移动到坐标（相对）" wait_click=true
 @cha index=3 action="move" time=1 to=[100,100]
 @click
+@say_line text="展示已结束" wait_click=true
