@@ -11,30 +11,34 @@
 
 // todo
 *dialog
-#global.change_page_at = change_page_at
+@if "change_page_at != null"
+	#global.change_page_at = change_page_at
+@endif
 @idlesp get=unused_index
 #log(unused_index)
 #var width = System.resolutionSize[0]
 #var height = System.resolutionSize[1]/2
 // 颜色 横向间隔 行间距 
 @if "enable==true "
+	#log("开启对话框")
 	@textwindow color=#0450C5 xinterval=1 yinterval=1 rect=[0,0,width,height] pos=[0,400]
 	@textstyle size=21 bold=false
-@else
-	@textoff
+/*@else
+	#log("关闭对话框")
+	@textoff*/
 @endif
 @return
 
 *say_line
 @if "text!=null"
-	@if "global.line_index == 2"
-		#log("在第",global.change_page_at,"换页")
+	#global.line_index += 1
+	@if "global.line_index % global.change_page_at==0"
+		#log("换行！")
 		[text text=text][p]
-	/*@elseif "wait_click==true"
+	@elseif "wait_click==true"
 		[text text=text][l][r]
-		#global.line_index = global.line_index+1
 		#log("当前行数",line_index)
-	@else
+	/*@else
 		[text text=text][r]*/
 	
 	@endif
